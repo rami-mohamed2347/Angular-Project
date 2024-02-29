@@ -1,0 +1,16 @@
+.flash-counter{
+    text-align: center;
+  }
+  .flash-counter p{
+    margin-bottom: 0;
+  }
+  .flash-counter p span{
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 23px;
+    font-weight: 600;
+  }
+  .dots{
+    font-size: 50px;
+    color: #f8af24;
+  }

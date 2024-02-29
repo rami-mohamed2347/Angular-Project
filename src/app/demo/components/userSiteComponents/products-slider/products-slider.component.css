@@ -1,0 +1,139 @@
+/* Slider **************************************************** */
+.slider {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    overflow:hidden;
+  }
+  .card-content {
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    width:100%;
+    overflow:auto;
+    padding: 0px 5px;
+    scroll-behavior:smooth;
+  }
+  .card-content::-webkit-scrollbar {
+     height:0px;
+  }
+  .slider-card , .card{
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: none;
+    border-radius: 15px;
+  }
+  .slider-card {
+    width: 300px;
+    min-width: 300px;
+    height: auto;
+    background: #fff;
+    position: relative;
+    z-index: 10;
+    margin: 18px;
+  }
+  .card .fav-watch{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: none;
+  }
+  .card .fav-watch .fav ,
+  .card .fav-watch .watch{
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 10px;
+    line-height: 1;
+    transition: all 0.4s ease;
+  }
+  .card .fav-watch .fav:hover ,
+  .card .fav-watch .watch:hover{
+    background-color: #F8AF24;
+    color: #fff;
+  }
+  .card .add-to-cart-btn{
+    background-color: #F8AF24;
+    color: #fff;
+    text-align: center;
+    border: none;
+    padding: 10px 0px;
+    font-size: 18px;
+    display: none;
+    transition: all 0.4s ease;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+  }
+  .card:hover .add-to-cart-btn{
+    display: block;
+  }
+  .card:hover .fav-watch{
+    display: block;
+  }
+  .card:hover {
+    transform:translate(0, -10px);
+    box-shadow: 0px 17px 35px 0px rgba(249, 194, 30, 0.3);
+  }
+  .slider-card .sale-percentage {
+    position:absolute;
+    left:15px;
+    top: 15px;
+    padding: 10px 15px;
+    color: #fff;
+    font-family: 600;
+    background-color: #c90808;
+    border-radius: 20px;
+  }
+  .card .new-price{
+    color: #c90808;
+    font-weight: 600;
+  }
+  .slider-card .old-price{
+    color: #b5b5b5;
+  }
+  .card .rate .star{
+    color: #F8AF24;
+  }
+  .card .rate span{
+    color: #b5b5b5;
+  }
+  .card .card-img {
+    transform: translate(90px,-10px);
+    margin: 0 30px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    transition: all .35s ease-out;
+  }
+  .card img {
+    height:250px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .card-body{
+    padding: 20px;
+  }
+  .slider-btn{
+    margin:auto 3px;
+    height:50px;
+    padding: 0px 15px;
+    border-radius:20px;
+    background:#F8AF24;
+    color: #fff;
+    border:0px;
+    outline:none;
+    cursor:pointer;
+    z-index:100;
+    box-shadow: 0px 0px 0px 0px rgba(249, 194, 30, 0.5);
+    transition: all .25s ease;
+  }
+  .slider-btn:hover{
+    box-shadow: 0px 17px 35px 0px rgba(249, 194, 30, 0.5);
+    background-color: #fff;
+    color: #F8AF24;
+  }
+  .slider-btn i {
+    font-size:25px;
+  }

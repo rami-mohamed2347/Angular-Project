@@ -1,0 +1,94 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img
+                src="../../../assets/Images/logo2.png"
+                alt="Logo"
+                class="navbar-logo"
+            />
+        </a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarSupportedContent"
+        >
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item underline">
+                    <a class="nav-link active" aria-current="page" href="#"
+                        >Home</a
+                    >
+                </li>
+                <li class="nav-item underline">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item underline">
+                    <a class="nav-link" href="#">Blogs</a>
+                </li>
+                <li class="nav-item underline">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input
+                    class="form-control position-relative"
+                    type="search"
+                    placeholder="Search products..."
+                    aria-label="Search"
+                />
+            </form>
+            @if (!authenticated) {
+            <ul class="navbar-nav navbar-icons mb-2 mb-lg-0">
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="#" role="button">
+                        <!-- <i class="fs-5 fa-solid fa-heart"></i> -->
+                        <fa-icon class="fs-5" [icon]="faHeart"></fa-icon>
+                    </a>
+                </li>
+                <li class="nav-item me-3">
+                    <a routerLink="/auth/user" class="nav-link" role="button">
+                        <!-- <i class="fs-5 fa-solid fa-user"></i> -->
+                        <fa-icon class="fs-5" [icon]="faUser"></fa-icon>
+                    </a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="#" role="button">
+                        <!-- <i class="fs-5 fa-solid fa-cart-shopping"></i> -->
+                        <fa-icon class="fs-5" [icon]="faCartShopping"></fa-icon>
+                    </a>
+                </li>
+            </ul>
+
+            } @else if (authenticated) {
+            <ul class="navbar-nav navbar-icons mb-2 mb-lg-0">
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="#" role="button">
+                        <!-- <i class="fs-5 fa-solid fa-heart"></i> -->
+                        <fa-icon class="fs-5" [icon]="faHeart"></fa-icon>
+                    </a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="#" role="button">
+                        <!-- <i class="fs-5 fa-solid fa-cart-shopping"></i> -->
+                        <fa-icon class="fs-5" [icon]="faCartShopping"></fa-icon>
+                    </a>
+                </li>
+                <li class="nav-item me-3">
+                    <a routerLink="/home" class="nav-link" (click)="logout()"
+                        >Logout</a
+                    >
+                </li>
+            </ul>
+            }
+        </div>
+    </div>
+</nav>

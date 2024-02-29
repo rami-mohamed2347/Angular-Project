@@ -1,0 +1,23 @@
+/* Footer****************************** */
+footer{
+    background-color: #07085B;
+    color: #fff;
+    line-height: 2;
+  }
+  footer a{
+    color: #fff;
+  }
+  footer .copy-right{
+    border-top: 1px solid #fff;
+  }
+  .email-input input{
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 5px 15px;
+  }
+  .email-input .plane{
+    position: absolute;
+    right: 45px;
+    top: 6px;
+  }

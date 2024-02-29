@@ -1,0 +1,68 @@
+<section id="ourProducts" class="my-5 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="title col-lg-9">
+                <p>Our Products</p>
+                <h1>Explore Our Products</h1>
+            </div>
+            <div class="col-lg-3">
+                <select class="dropdown" (change)="getSelectedCateg($event)">
+                    <option value="allProducts" selected>All Products</option>
+                    @for (category of categories; track $index) {
+                    <option value="{{ category._id }}">
+                        {{ category.name }}
+                    </option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <!-- *************Product Crad ***************-->
+            @for (item of products; track $index) {
+            <div class="col-lg-3 col-md-3 col-sm-6 mt-5">
+                <div class="card">
+                    <div class="position-relative">
+                        <img
+                            src="{{ item.media }}"
+                            class="card-img-top"
+                            alt="..."
+                        />
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                        <div class="fav-watch">
+                            <p class="fav">
+                                <fa-icon [icon]="faHeart"></fa-icon>
+                            </p>
+                            <p class="watch">
+                                <fa-icon [icon]="faEye"></fa-icon>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <p class="card-text"></p>
+                        <h6 class="new-price d-inline-block">
+                            {{ item.price }} L.E
+                        </h6>
+                        <p class="rate m-0">
+                            <fa-icon class="star" [icon]="faStar"></fa-icon>
+                            <fa-icon class="star" [icon]="faStar"></fa-icon>
+                            <fa-icon class="star" [icon]="faStar"></fa-icon>
+                            <fa-icon class="star" [icon]="faStar"></fa-icon>
+                            <fa-icon
+                                class="star"
+                                [icon]="faStarHalfStroke"
+                            ></fa-icon>
+                            <span>(70)</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+        <div class="row my-5">
+            <div class="col">
+                <button class="btn-more btn px-5 py-2 fs-5">View More</button>
+            </div>
+        </div>
+    </div>
+</section>
