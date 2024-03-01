@@ -53,12 +53,11 @@
                         class="flex align-items-center justify-content-between mb-5 gap-5"
                     >
                         <div class="flex align-items-center">
-                            <p-checkbox
-                                id="rememberme1"
-                                [binary]="true"
-                                styleClass="mr-2"
-                            ></p-checkbox>
-                            <label for="rememberme1">Remember me</label>
+                            <a
+                                routerLink="/auth/register"
+                                class="font-medium no-underline ml-1 text-left cursor-pointer"
+                                >New User?
+                            </a>
                         </div>
                         <a
                             routerLink="/auth/forgot"

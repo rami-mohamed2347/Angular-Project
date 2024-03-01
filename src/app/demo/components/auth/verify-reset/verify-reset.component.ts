@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { AuthService } from 'src/app/demo/service/auth.service';
@@ -18,7 +18,7 @@ import { LayoutService } from 'src/app/layout/service/app.layout.service';
         `,
     ],
 })
-export class VerifyResetComponent {
+export class VerifyResetComponent implements AfterViewInit {
     resetCode: string;
 
     constructor(
@@ -27,6 +27,21 @@ export class VerifyResetComponent {
         public layoutService: LayoutService,
         private messageService: MessageService
     ) {}
+
+    ngAfterViewInit(): void {
+        this.showalert();
+    }
+
+    showalert() {
+        setTimeout(() => {
+            this.messageService.add({
+                severity: 'success',
+                summary: 'Success',
+                detail: "We've Sent you an email with your reset code",
+                life: 5000,
+            });
+        });
+    }
 
     verify() {
         this.AuthService.verifyResetCode({
