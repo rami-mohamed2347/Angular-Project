@@ -74,20 +74,6 @@ export class UsersComponent implements OnInit {
                     });
                 }
             );
-        // this.userService.getUsers().subscribe(
-        //     (data: User[]) => {
-        //         this.users = data;
-        //     },
-        //     (error) => {
-        //         console.error('Error fetching users:', error);
-        //         this.messageService.add({
-        //             severity: 'error',
-        //             summary: 'Error',
-        //             detail: 'Failed to fetch users',
-        //             life: 3000,
-        //         });
-        //     }
-        // );
     }
 
     openNew() {

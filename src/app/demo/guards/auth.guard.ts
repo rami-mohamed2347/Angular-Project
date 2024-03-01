@@ -27,9 +27,9 @@ export class AuthGuard implements CanActivate {
                     summary: 'Error',
                     detail: 'Please Login',
                     life: 3000,
-                }); // Display message after a short delay
-            }, 500); // Adjust the delay as nee
-            return false; // Deny access
+                }); 
+            }, 500); 
+            return false; 
         }
     }
 }
