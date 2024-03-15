@@ -262,7 +262,7 @@ export class CrudComponent implements OnInit {
             formData.append('name', this.product.name);
             formData.append('color', this.product.color);
             formData.append('description', this.product.description);
-            formData.append('status', this.product.status.toString());
+            formData.append('stock', this.product.status.toString());
             formData.append('category', this.product.category.toString());
             formData.append('price', this.product.price.toString());
             formData.append('quantity', this.product.quantity.toString());
